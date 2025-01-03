@@ -1,0 +1,484 @@
+@import url('https://fonts.cdnfonts.com/css/typewriter-oldstyle');
+
+body {
+    background-image: linear-gradient(0deg, dimgray, gray, dimgray), url('../images/PNG/note.png') !important;
+}
+
+#preview {
+    width: 70% !important;
+    margin: auto auto !important;
+    border: 0.3vw solid black;
+    width: 45%;
+    margin: 5vw 5vw;
+}
+
+#preview .figure {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+#preview figcaption {
+    width: 65% !important;
+}
+
+
+#preview .figure div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 33%;
+}
+
+#preview img {
+    display: inline-block;
+    border-radius: 1.6vw;
+    width: 25%;
+    box-shadow: #ccc 0.2vw 0.2vw, #ccc -0.2vw -0.2vw;
+}
+
+#preview mark {
+    padding: 0.2vw;
+    border-radius: 0.3vw;
+}
+
+.markdown-content {
+    border-radius: 0.70vw;
+    padding: 2vw 1vw;
+    background-image: linear-gradient(0deg, #555, #333, #555);
+    font-family: 'Typewriter', sans-serif;
+    color: azure;
+}
+
+
+.markdown-content h1,
+.markdown-content h2 {
+    color: #fafbfc;
+    font-weight: bold;
+    text-align: start;
+    margin: auto 2vw;
+    padding: 0.3vw 0.6vw;
+    border-bottom: 0.2vw solid hsla(210, 32%, 91%, 0.4);
+    box-shadow: inset 10vw 4vw 12px 21px rgba(0, 0, 0, 0.3);
+}
+
+.markdown-content h6 a {
+    color: dodgerblue !important;
+    text-decoration: none;
+    font-size: 14pt !important;
+}
+
+.markdown-content code {
+    padding: 0vw 1.6vw;
+    border-radius: 0.3vw;
+    font-family: monospace;
+    font-size: 09pt;
+    box-shadow: inset 1500vw 1500vw 1px 1px rgba(95, 93, 93, 0.6), inset 1500vw 1500vw 2px 10px hsla(210, 100%, 56%, 0.425);
+    color: rgb(250, 202, 10);
+    /* 
+    background-color: whitesmoke;
+    color: hsl(0, 0%, 5%); */
+}
+
+.markdown-content pre {
+    padding: 1vw;
+    border-radius: 5px;
+    background-color: #555;
+}
+
+.markdown-content ul li a {
+    color: rgb(189, 205, 221);
+    text-decoration: none;
+    font-size: 19pt !important;
+}
+
+.markdown-content ul {
+    box-shadow: inset 12vw 12vw 12px 200px hsl(0, 0%, 35%);
+}
+
+.markdown-content ol {
+    box-shadow: inset 12vw 12vw 12px 1200px hsl(229, 17%, 47%);
+    list-style-type: none;
+}
+
+.markdown-content table {
+    width: 80% !important;
+    margin: 2vw auto;
+    border: none !important;
+}
+
+.markdown-content table,
+th,
+td {
+    border: 0.01vw solid wheat;
+    text-align: center;
+    border-collapse: collapse;
+    border-color: transparent;
+}
+
+table img {
+    width: 75% !important;
+}
+
+table th a,
+table td a {
+    color: rgb(189, 205, 221) !important;
+    text-decoration: none;
+    font-size: 19pt !important;
+}
+
+.tooltip {
+    position: relative;
+    color: cadetblue;
+    background-color: aqua;
+}
+
+.tooltiptext {
+    display: none;
+}
+
+.tooltip:hover .tooltiptext {
+    display: block !important;
+}
+
+nav {
+    width: 70%;
+    height: 07vh;
+    margin: 05vh auto;
+    padding: 5.5vh 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+nav a[href="#miModal"] {
+    color: hsl(300, 2%, 33%) !important;
+    background-color: hsla(0, 0%, 20%, 0.3);
+    text-shadow: 0.1vw 0.1vw 1px whitesmoke, -0.1vw -0.1vw 1px blueviolet;
+    /* box-shadow: inset 10vw 10vw 3px hsla(0, 0%, 96%, 0.589); */
+    letter-spacing: 0.2vw;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("../images/PNG/note.png");
+    width: fit-content;
+    min-height: 16vh;
+    padding: 1vw;
+    border-radius: 02.5vw;
+    /* Center and scale the image nicely */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+    position: relative;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* The navbar */
+.topnav {
+    overflow: hidden;
+    background-color: hsla(0, 0%, 20%, 0.3);
+    margin-top: 2.60vh;
+    border-radius: 0.5vw;
+}
+
+/* Navbar links */
+.topnav a {
+    display: inline-block !important;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: 0.1vw 0.1vw 1px black, 0.2vw 0.2vw 2px darkorange, -0.1vw -0.1vw 2px darkorange;
+    font-family: 'Typewriter', sans-serif;
+    font-size: 17px;
+}
+
+.topnav a:hover:not(a[href="#miModal"]) {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Estilos para el modal */
+.modal-contenido {
+    background-color: rgb(10, 10, 10);
+    width: fit-content;
+    /* Ajustar el ancho */
+    max-width: 600px;
+    /* Ancho máximo para evitar que sea demasiado grande */
+    height: auto;
+    /* Ajustar la altura al contenido */
+    padding: 10px 20px;
+    position: absolute;
+    /* Necesario para el arrastre */
+    top: 50%;
+    /* Inicialmente centrado */
+    left: 50%;
+    /* Inicialmente centrado */
+    transform: translate(-50%, -50%);
+    /* Mantiene el centrado inicial */
+    cursor: move;
+    /* Indicador de que es arrastrable */
+    z-index: 1000;
+    /* Asegura que el modal esté sobre otros elementos */
+}
+
+/* Estilos para el fondo del modal */
+.modal {
+    background-color: rgba(0, 0, 0, 0.27);
+    position: fixed;
+    /* Fijo para que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+    z-index: 999;
+    /* Debajo del modal-contenido */
+}
+
+#miModal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilos origínales de la ventana modal,
+arriba los estílos corregídos.
+.modal {
+    width: fit-content;
+    height: 15%;
+    padding: 2vw;
+    margin: auto auto;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.modal-contenido {
+    /* background-color: aqua; 
+    width: fit-content;
+    height: auto;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+}
+
+#miModal:target {
+    opacity: 1;
+    pointer-events: auto;
+} */
+
+
+/* #efecto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.dragable {
+    /* background-color: #f0f0f0; */
+    border: 0.2vw solid hsl(0, 1%, 47%);
+    cursor: grab;
+}
+
+/* .iconos {
+    font-size: 22pt;
+} */
+
+#main {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+#preview summary::marker {
+    content: none !important;
+}
+
+#preview summary {
+    cursor: pointer !important;
+    color: cornflowerblue;
+    text-decoration: underline;
+    margin: 0.5vh auto;
+}
+
+#preview summary::after {
+    content: " Mostrar";
+    color: rgb(183, 183, 248);
+    margin-right: 10px;
+}
+
+#preview #capitulo-uno::before {
+    content: "Capitulo " !important;
+    color: rgb(183, 183, 248);
+    margin-right: 10px;
+}
+
+#preview details[open] summary::after {
+    content: " Oculta";
+}
+
+#preview #resumen-sintx-blog,
+#preview #resumen-sintx-listas,
+#preview #resumen-sintx-enlaces,
+#preview #resumen-sintx-variis,
+#preview #resumen-sintx-codeYtablas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#preview #resumen-sintx-blog figure,
+#preview #resumen-sintx-listas figure,
+#preview #resumen-sintx-enlaces figure,
+#preview #resumen-sintx-variis figure,
+#preview #resumen-sintx-codeYtablas figure {
+    width: 48% !important;
+}
+
+#preview #resumen-sintx-blog figure figcaption,
+#preview #resumen-sintx-listas figure figcaption,
+#preview #resumen-sintx-enlaces figure figcaption,
+#preview #resumen-sintx-variis figure figcaption,
+#preview #resumen-sintx-codeYtablas figure figcaption {
+    width: 100% !important;
+    border: 0.1vw dashed aliceblue;
+    padding: 0 0.3vw;
+}
+
+.markdown-content .imgs img,
+.markdown-content .imgs {
+    width: 11% !important;
+    border-radius: 50% !important;
+    border-bottom: turquoise 0.3vw solid;
+    border-top: turquoise 0.3vw solid;
+    border-right: 0.2vw dashed dodgerblue;
+    border-left: 0.2vw dashed dodgerblue;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    box-shadow: 0 0.3vw 1px rgba(0, 0, 0, .8), 0 -0.3vw 1px rgba(0, 0, 0, .8);
+    overflow: hidden;
+}
+
+#preview section.fotos figure {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly !;
+    border: 0.3vw solid white;
+    padding: 1vw;
+    position: relative;
+}
+
+#preview section.fotos figure img {
+    position: inherit;
+    width: 23%;
+    opacity: 1;
+}
+
+#preview h2 a {
+    color: dodgerblue;
+}
+
+#html-output {
+    background-image: linear-gradient(0deg, dimgray, gray, dimgray) !important;
+    padding: 1vw;
+    color: #000000;
+    text-shadow: 0.1vh 0.1vw 1px black;
+    font-family: 'Typewriter', sans-serif;
+}
+
+#html-output table,
+#html-output th,
+#html-output td {
+    border: #fdfdfd 0.2vw solid;
+}
+
+#error-message {
+    background-color: #ccc;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #ddd; 
+}
+
+.dropdown a {
+    background-color: #ddd;
+} 
+
+.show {
+    display: block;
+}
+
+
+#contextMenu {
+    position: fixed; /* Cambiado a fixed para que esté en relación a la ventana */
+    display: none;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    background-color: white; /* Estilo básico, puede personalizarse */
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#contextMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contextMenu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#contextMenu li:hover {
+    background-color: #eee;
+}

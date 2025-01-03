@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.title = 'Guía del lenguaje Java';
+        Prism.highlightAll();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- <link rel="stylesheet" href="./css/previewmd.css"> -->
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="menu">
+            <menu-component></menu-component>
+        </div>
+        <section id="preview" class="markdown-content markdown-body">
+        </section>
+    </div>
+    <script src="./js/renderMarkdown.js"></script>
+    <script src="./js/menu-component.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+</body>
+
+</html>
