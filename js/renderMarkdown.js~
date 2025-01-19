@@ -1,4 +1,4 @@
-import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+import marked from "./marked.min.js";
 
 document.addEventListener('DOMContentLoaded', (event) => {
     function loadMarkdownContent() {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 .then((response) => response.text())
                 .then((markdownContent) => {
                     // Renderiza el contenido Markdown
-                    preview.innerHTML = marked.parse(markdownContent);
+                    preview.innerHTML = marked(markdownContent);
                    // Prism.highlightAll();
                     // Ejecuta el scroll al tope de la página después de cargar el contenido
                     scrollToTop();

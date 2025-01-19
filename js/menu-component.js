@@ -4,16 +4,19 @@ class MenuComponent extends HTMLElement {
         const shadow = this.attachShadow({ mode: 'open' });
 
         const style = document.createElement('style');
-        style.textContent = `
+        style.textContent = /* css */ `
+            @import url('https://fonts.cdnfonts.com/css/bushido');
+            @import url('https://fonts.cdnfonts.com/css/frijole');
             .menu {
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 25%;
+                width: 20%;
                 height: 101vh;
-                background: white;
+                background-image: linear-gradient(90deg, antiquewhite, hsla(54, 77%, 75%, 0.1), antiquewhite);
                 padding: 20px;
                 border-right: 1px solid #ccc;
+                box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
                 overflow-y: auto;
             }
 
@@ -23,49 +26,74 @@ class MenuComponent extends HTMLElement {
                 margin: 0;
             }
 
-            .menu ul li {
-                margin: 10px 0;
+            .menu ul:Not(:first-child) li a {
+                padding: 0.3vh 0.3vw;
+                color: #000000;
+/*/ font-family: 'Bushido Shadow', sans-serif;*/
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
             }
 
             .menu ul li a {
                 text-decoration: none;
-                color: #333;
+                color: darkkhaki !important;
+                text-shadow: 0 0 2px #000000;
+                font-family: 'Frijole', sans-serif;
+                background: transparent;
             }
 
-            .menu ul ul {
-                display: none;
+           .menu ul ul {
+                margin: 1vh 0 0 2vw;
                 padding-left: 20px;
             }
 
-            .menu ul li:hover > ul {
-                display: block;
+           .menu ul ul li a {
+                color: darkkhaki;
+                font-family: 'Chilanka', 'Comic Sans MS', cursive;
             }
+                
+            .menu ul ul ul li {
+                margin-top: 0 !important;
+                margin-bottom: 3vh !important;
+            }
+
+            .menu ul ul ul li a {
+                color: #000000 !important;
+                box-shadow: none !important;
+                margin: 0 2vw 2vw 2vw;
+            }
+
+            ul#home .indice  {
+                background: crimson;
+            }
+          
         `;
 
         const menu = document.createElement('nav');
         menu.classList.add('menu');
-        menu.innerHTML = `
+        menu.innerHTML = /* html */ `
+        <ul id="home">
+           <li class="indice"><a href="./README.md">README</a></li>
+        </ul>
             <ul>
-                <li><a href="./README.md">README</a></li>
                 <li>
-                    <a href="#">Teoria</a>
+                    <a href="#"><i class="logo_carpeta">&#x1f4c2;</i> Teoria</a>
                     <ul>
                         <li>
-                            <a href="#">Capítulo 1</a>
+                            <a href="#"><i class="logo_carpeta">&#x1f4c2;</i> Capítulo 1</a>
                             <ul>
                                 <li><a href="Teoria/Capitulo1/introduccion.md">Introducción</a></li>
                                 <li><a href="Teoria/Capitulo1/Historia/breve_historia.md">Historia</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Capítulo 2</a>
+                            <a href="#"><i class="logo_carpeta">&#x1f4c2;</i> Capítulo 2</a>
                             <ul>
                                 <li><a href="Teoria/Capitulo2/introduccion.md">Introducción</a></li>
                                 <li><a href="Teoria/Capitulo2/Historia/breve_historia.md">Historia</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Capítulo 3</a>
+                            <a href="#"><i class="logo_carpeta">&#x1f4c2;</i> Capítulo 3</a>
                             <ul>
                                 <li><a href="Teoria/Capitulo3/introduccion.md">Introducción</a></li>
                                 <li><a href="Teoria/Capitulo3/Historia/breve_historia.md">Historia</a></li>
@@ -122,6 +150,7 @@ class MenuComponent extends HTMLElement {
                         </li>
                     </ul>
                 </li>
+                
                 <li>
                     <a href="#">Prácticas</a>
                     <ul>

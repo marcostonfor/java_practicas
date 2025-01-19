@@ -7,7 +7,7 @@ html {
 
 body {
     padding: 2vh 2vw;
-    background-image: linear-gradient(0deg, dimgray, gray, dimgray), url('../images/PNG/note.png') !important;
+    background-image: linear-gradient(90deg, hsl(54, 77%, 75%), hsl(0, 0%, 100%), hsl(54, 77%, 75%));
 }
 
 #main {
@@ -47,3 +47,4 @@ body {
     background-color: #333;
     color: #f8f8f2;
 } */
+
