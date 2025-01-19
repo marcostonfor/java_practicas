@@ -22,7 +22,7 @@ class MenuComponent extends HTMLElement {
 
             .menu ul {
                 list-style: none;
-                padding: 0;
+                padding: 0.5vw 0.5vh;
                 margin: 0;
             }
 
@@ -42,9 +42,24 @@ class MenuComponent extends HTMLElement {
             }
 
            .menu ul ul {
-                margin: 1vh 0 0 2vw;
-                padding-left: 20px;
+                margin: 6vh 2vw;
+                padding-left: 20px; 
+                border-left: 0.5vw solid brown;
+                border-radius: 1.5vw;
+            
             }
+
+            .menu ul ul li {
+                padding-top: 1vh !important; 
+                padding-bottom: 1vh !important;
+            }
+
+            .menu ul ul ul {
+                margin: 2vh 2vw;
+                padding-left: 1vw !important;
+                border-left: 0.3vw solid brown;
+                height: 15vh;
+            }  
 
            .menu ul ul li a {
                 color: darkkhaki;
@@ -57,8 +72,10 @@ class MenuComponent extends HTMLElement {
             }
 
             .menu ul ul ul li a {
-                color: #000000 !important;
-                box-shadow: none !important;
+                padding: 1vh 1vw !important;
+                color: aliceblue !important;
+                box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 1) !important;
+                border-radius: 0.6vw;
                 margin: 0 2vw 2vw 2vw;
             }
 
