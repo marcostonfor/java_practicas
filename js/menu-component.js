@@ -1,3 +1,4 @@
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 class MenuComponent extends HTMLElement {
     constructor() {
         super();
